@@ -35,11 +35,11 @@ This will generate 100 users using the [faker-js](https://fakerjs.dev/) library.
 
 When the application launches, the following endpoints are available:
 
-- **List Users**: `GET /api/users`
-- **Get User**: `GET /api/users/:id`
-- **Add User**: `POST /api/users`
-- **Update User**: `PATCH /api/users/:id`
-- **Delete User**: `DELETE /api/users/:id`
+- `GET /api/users`
+- `GET /api/users/:id`
+- `POST /api/users`
+- `PATCH /api/users/:id`
+- `DELETE /api/users/:id`
 
 
 ## Step 1: Frontend Implementation
