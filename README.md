@@ -31,7 +31,9 @@ To create a specified number of dummy users, provide a number as an argument, su
 npm run generate 100
 ```
 
-This will generate 100 users using the [faker-js](https://fakerjs.dev/) library. The following endpoints are available:
+This will generate 100 users using the [faker-js](https://fakerjs.dev/) library. 
+
+When the application launches, the following endpoints are available:
 
 - **List Users**: `GET /api/users`
 - **Get User**: `GET /api/users/:id`
