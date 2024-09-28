@@ -1,0 +1,23 @@
+.mask {
+    @apply bg-gray-900 bg-opacity-55 fixed top-0 left-0 right-0 bottom-0 z-30;
+}
+
+.modal {
+    @apply absolute top-16 mx-auto w-full max-w-screen-sm bg-white z-40 border border-gray-300  shadow-gray-500 shadow-lg rounded-xl;
+}
+
+.modal .header {
+    @apply flex justify-between items-center py-4 px-6 border-b border-gray-100;
+}
+
+.modal .title {
+    @apply text-2xl font-bold tracking-tight;
+}
+
+.modal .close {
+    @apply flex flex-shrink-0 w-10 h-10 rounded-full bg-gray-100 justify-center items-center;
+}
+
+.modal .content {
+    @apply px-6 py-4;
+}

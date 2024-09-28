@@ -1,0 +1,28 @@
+
+.fieldset {
+     @apply flex flex-col w-full space-y-1.5;
+}
+
+.fieldset input[type="text"], .fieldset input[type="number"], .fieldset select {
+    @apply h-12 px-2.5 font-medium border-2 border-neutral-300 rounded outline-black;
+}
+
+.fieldset input.has-error, .fieldset select.has-error {
+    @apply border-red-500;
+}
+
+.fieldset label {
+    @apply text-sm font-medium text-gray-500;
+}
+
+.fieldset .info {
+    @apply text-xs text-gray-400;
+}
+
+.fieldset .error {
+    @apply text-xs text-red-500;
+}
+
+.button {
+    @apply px-6 py-3.5 border-2 border-black rounded-full hover:bg-opacity-90 hover:border-opacity-90 transition-colors ease-in-out duration-150 text-base font-semibold bg-black text-white disabled:bg-gray-100 disabled:border-gray-100 disabled:text-gray-500;
+}

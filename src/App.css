@@ -1,0 +1,18 @@
+.layout {
+    @apply min-h-screen relative p-8;
+
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+.headline {
+    @apply text-5xl font-extrabold tracking-tighter;
+}
+
+table th, table td {
+    @apply p-4 text-left first:pl-0 last:pr-0;
+}
+
+table th {
+    @apply font-medium text-sm text-neutral-500 tracking-tight;
+}
