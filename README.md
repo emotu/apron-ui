@@ -1,7 +1,7 @@
-# Apron Take Home Project
+# Take Home Project
 
 The objective of this home task is to develop a production-ready web application that provides a
-comprehensive UX for CRUD operations over a User entity. This project represents my implementation of the tasks, with the aim of demonstrating proficiency in the Apron's chosen technology stack.
+comprehensive UX for CRUD operations over a User entity. This project represents my implementation of the tasks, with the aim of demonstrating proficiency in the chosen technology stack.
 
 ### Setup & Launch Instructions
 
