@@ -7,6 +7,7 @@ import { Button, Alert } from "@src/components";
 import Form from "./form";
 import { useQuery, useQueryClient, useMutation } from "@tanstack/react-query";
 import _ from "lodash";
+import { Toaster, toast } from "sonner";
 
 const userEngine = new Engine<User>("users");
 
@@ -59,12 +60,16 @@ function Sreen() {
         onSuccess: async () => {
             closeModal();
             // Flash success message
-            await refetch();
+            toast.success("User successfully created")
+            
         },
         onError: async () => {
             closeModal();
-            // Flash error message
+            toast.error("User could not be created");
         },
+        onSettled: async () => {
+            await refetch();
+        }
     });
 
     // Mutation for updating a user
@@ -76,11 +81,14 @@ function Sreen() {
         onSuccess: async () => {
             closeModal();
             // Flash success message
-            await refetch();
+            toast.success("User successfully updated");
         },
         onError: async () => {
             closeModal();
-            // Flash error message
+            toast.error("User could not be updated");
+        },
+        onSettled: async () => {
+            await refetch();
         },
     });
 
@@ -89,13 +97,15 @@ function Sreen() {
             return userEngine.delete({ id });
         },
         onSuccess: async () => {
-            closeModal();
             // Flash success message
-            await refetch();
+            toast.success("User successfully deleted");
         },
         onError: async () => {
+            toast.error("User could not be deleted");
+        },
+        onSettled: async () => {
             closeModal();
-            // Flash error message
+            await refetch();
         },
     });
 
@@ -138,6 +148,7 @@ function Sreen() {
 
     return (
         <>
+            <Toaster richColors />
             <div className="list-view space-y-4">
                 <div className="flex justify-between items-center py-4 sticky top-0 bg-[var(--background-color)]">
                     <h1 className="headline">Users</h1>
