@@ -7,7 +7,7 @@ import _ from "lodash";
 interface FormProps {
     title?: string;
     isOpen?: boolean;
-    initialValues?: object | null;
+    initialValues?: object;
     onSave?: (values: object) => void;
     onCancel?: () => void;
 }
