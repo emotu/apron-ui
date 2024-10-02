@@ -58,3 +58,28 @@ Important files to look for:
   - `src/lib/engine.ts` **[IMPORTANT]** - A API Endpoint class that implements all backend communication in a reusable way. 
   
   - `src/components/*` - Reusable presentation and form components like e.g. `Input` & `Select` for react-hook-form, `Modal` and `Alert` for dialog boxes.
+
+
+## Step 2: E2E Testing
+
+This application uses Playwright for testing. Test scripts are written in `src/tests/users.spec.ts`. 
+
+To run tests, first ensure that the application is running in dev mode:
+
+```bash
+npm run dev
+```
+
+Then in the source folder, run:
+
+```bash
+npx playwright test
+```
+
+You can view the results of the test by running:
+
+```bash
+npx playwright show-report
+```
+
+
